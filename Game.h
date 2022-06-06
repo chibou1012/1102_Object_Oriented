@@ -1,18 +1,22 @@
+#ifndef Game_H
+#define Game_H
 #include<iostream>
 #include<Windows.h> 
 #include<conio.h>
 #include<cstdio>
-#ifndef GAME_H
-#define GAME_H
+#include "GlobalVar.h"
+using namespace std;
 class Game
 {
 public:
-	Game();
+	Game()
+	{
+		Init();
+	}
 	void Init();
 	void play();
 	int Put();
 	int Judge(int x, int y);
-private:
 	int g_x, g_y;
 	int g_currentGamer;
 };
